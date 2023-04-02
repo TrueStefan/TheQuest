@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnterDoor3 : MonoBehaviour
+public class EnterDoor4 : MonoBehaviour
 {
 
     private void OnTriggerEnter2D(Collider2D other){
         Debug.Log("hello");
-        SceneManager.LoadScene("BossLevel");
+        SceneManager.LoadScene("MainMenu");
     }
 }
