@@ -6,6 +6,7 @@ public class MobShootAI : MonoBehaviour
 {
     public GameObject projectile;
     public float aggroRange = 15f;
+    public Animator animator;
     public float fireRate = 1f;
     float timeToShoot = 0;
     bool canShoot = true;
@@ -32,10 +33,18 @@ public class MobShootAI : MonoBehaviour
         float distance = Vector2.Distance(player.transform.position, transform.position);
         if (distance <= aggroRange && canShoot)
         {
+            if (animator != null)
+            {
+                animator.SetBool("isShooting", true);
+            }
             canShoot = false;
             timeToShoot = 1.0f / fireRate;
             GameObject newProj = Instantiate(projectile, transform.position, transform.rotation);
             Destroy(newProj, 8f);
+        }
+        if (animator != null)
+        {
+            animator.SetBool("isShooting", false);
         }
     }
 }
