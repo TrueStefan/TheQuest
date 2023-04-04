@@ -19,7 +19,11 @@ public class MobChaseAI : MonoBehaviour
         float distance = Vector2.Distance(player.transform.position, transform.position);
         if (distance <= aggroRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            Vector3 direction = player.transform.position - transform.position;
+            Vector3 movement = direction.normalized * speed * Time.deltaTime;
+            if (movement.magnitude > direction.magnitude)
+                movement = direction;
+            GetComponent<CharacterController>().Move(movement);
         }
     }
 }
