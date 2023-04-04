@@ -11,16 +11,7 @@ public class ChestOpen : MonoBehaviour
     {
         chestAnim = GetComponent<Animator>();
         Debug.Log("Starting state:" + chestAnim.GetBool("ChestOpen"));
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            chestAnim.SetBool("ChestOpen", true);
-            Debug.Log("After collision state:" + chestAnim.GetBool("ChestOpen"));
-            chest.ShowItem(); // call the ShowItem() function of the Chest script component
-        }
+        chestAnim.SetBool("ChestOpen", true);
+        chest.ShowItem();
     }
 }
