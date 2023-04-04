@@ -8,6 +8,6 @@ public class EnterDoor4 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
         Debug.Log("hello");
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("WinScreen");
     }
 }
