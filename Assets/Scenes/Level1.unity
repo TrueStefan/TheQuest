@@ -19040,7 +19040,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTable:
-    list: []
+    list:
+    - item: {fileID: 1163064606335445716, guid: b8d7fd68a437e4f2fa054f4354dbc873, type: 3}
+      weight: 9
+    - item: {fileID: 450429620290913382, guid: f59909410d68946d08bc7d4f3603a0bf, type: 3}
+      weight: 5
+    - item: {fileID: 29143096803224444, guid: d7df8ea2e1faa464284f6f3d49eaecd6, type: 3}
+      weight: 7
+    - item: {fileID: 6993824462715344407, guid: 832f8aac2a271452eb1d2ff99b6e98b9, type: 3}
+      weight: 2
+    - item: {fileID: 6293130592454992169, guid: 78398471d2faa432ba244dcc4f45e7f1, type: 3}
+      weight: 6
+    - item: {fileID: 3024571405257991603, guid: b3cff6d1d7b734eedb7be32158359444, type: 3}
+      weight: 3
+    - item: {fileID: 7913982497261884703, guid: 68b1a46dbd8ef4a8c92913cd07bae3ec, type: 3}
+      weight: 10
   itemHolder: {fileID: 2132192291}
 --- !u!61 &1100377160
 BoxCollider2D:
@@ -23738,7 +23752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132192290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
