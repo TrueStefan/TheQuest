@@ -22,18 +22,7 @@ public class Chest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space")){
-            if (IsOpen()){
-                animator.SetTrigger("close");
-            }
-            else{
-                animator.SetTrigger("open");
-            }
-        }
-    }
 
-    bool IsOpen(){
-        return animator.GetCurrentAnimatorStateInfo(0).IsName("ChestOpen");
     }
 
     public void ShowItem(){
