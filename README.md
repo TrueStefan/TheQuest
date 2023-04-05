@@ -1,4 +1,13 @@
 The Quest
+
+Group Members
+
+    Elizabeth Lenkic - 250953470
+    Stefan Pisic - 251110215
+    Colby Fick - 251129209
+    Mihir Kadiya - 251129342
+    John Dick - 251100283
+
 Overview
 
 "The Quest" is a thrilling mini-quest game that challenges players to fight off relentless enemies to progress to the next level. With each passing level, the game gets increasingly challenging, testing your skills and strategic thinking to the fullest. But fret not; if you complete a level, you'll be rewarded with a randomly generated item to aid you in your journey forward. The game's ultimate objective is to overcome all obstacles and make it to the final boss. You play the game using the arrow keys to move your character and the mouse pad to wield your weapon to defeat your enemies.
