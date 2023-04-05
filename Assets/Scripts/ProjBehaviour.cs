@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ProjBehaviour : MonoBehaviour
 {
-    public float damage = 6f;
+    public float damage = 0.5f;
     public float speed = 5f;
+    public Collider2D projCollider;
     Transform playerPosition;
     Vector3 direction;
     
@@ -20,5 +21,14 @@ public class ProjBehaviour : MonoBehaviour
     void Update()
     {
         transform.position += direction * Time.deltaTime * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerController player = collision.GetComponent<PlayerController>();
+            player.TakeDamage(damage);
+        }
     }
 }

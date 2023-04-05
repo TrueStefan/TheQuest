@@ -133,6 +133,7 @@ MonoBehaviour:
   moveSpeed: 1
   collisionOffset: 0.05
   canMove: 1
+  health: 10
 --- !u!50 &6302298288853290424
 Rigidbody2D:
   serializedVersion: 4
@@ -282,4 +283,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordCollider: {fileID: 7203859457484378977}
-  damage: 1
+  damage: 5

@@ -44,5 +44,16 @@ public class SwordAttack : MonoBehaviour
                 mob.TakeDamage(damage);
             }
         }
+
+        if (collision.gameObject.tag == "Totem")
+        {
+            MobBase mob = collision.GetComponent<MobBase>();
+            print(mob);
+
+            if (mob != null)
+            {
+                mob.TakeDamage(damage);
+            }
+        }
     }
 }

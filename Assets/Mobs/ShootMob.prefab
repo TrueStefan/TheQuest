@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9164069888417388073}
   m_Layer: 0
   m_Name: ShootMob
-  m_TagString: Untagged
+  m_TagString: Totem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

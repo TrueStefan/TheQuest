@@ -9,6 +9,7 @@ public class MobBase : MonoBehaviour
         set
         {
             health = value;
+            print("Totem health: " + health);
 
             if (health <= 0)
             {
