@@ -38,6 +38,7 @@ public class SwordAttack : MonoBehaviour
         if(collision.gameObject.tag == "Mob")
         {
             MobHitbox mob = collision.GetComponent<MobHitbox>();
+            print(mob);
 
             if (mob != null)
             {
