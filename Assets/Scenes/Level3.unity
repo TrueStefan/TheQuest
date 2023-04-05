@@ -6042,6 +6042,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4772765712563136749, guid: cb5d853bbe703404bab53e471a4d2167, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8415689791239858859, guid: cb5d853bbe703404bab53e471a4d2167, type: 3}
       propertyPath: m_Name
       value: Mob3 (2)
