@@ -4,8 +4,27 @@ using UnityEngine;
 
 public class MobBase : MonoBehaviour
 {
-    public int health = 10;
-    public int damage = 4;
+    public float Health
+    {
+        set
+        {
+            health = value;
+
+            if (health <= 0)
+            {
+                Defeated();
+            }
+        }
+
+        get
+        {
+            return health;
+        }
+    }
+
+    public float health = 5;
+    public int damage = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,18 +34,17 @@ public class MobBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void Defeated()
     {
-        if (collision.gameObject.tag == "PlayerAttack")
-        {
-            //something like this
-            //health -= collision.gameObject.GetComponent<PlayerAttack>().damage;
-        }
+        print("dead");
+        Destroy(gameObject);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
     }
 }
