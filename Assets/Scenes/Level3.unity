@@ -788,7 +788,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 253996698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23def6da6a3dfee4a89e9b107ec365c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fff728d1184741468577c872062d690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &279482542
@@ -971,19 +971,6 @@ MonoBehaviour:
     - item: {fileID: 7913982497261884703, guid: 68b1a46dbd8ef4a8c92913cd07bae3ec, type: 3}
       weight: 10
   itemHolder: {fileID: 1693187428}
---- !u!114 &349846093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349846090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d241cd93cbfca4de4841df4b9c4da451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chest: {fileID: 349846092}
 --- !u!61 &349846094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1010,6 +997,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.28, y: 4.36}
   m_EdgeRadius: 0
+--- !u!114 &349846095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349846090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34483b365f6830c43bbf958dd496cc99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 349846092}
 --- !u!1001 &438511548
 PrefabInstance:
   m_ObjectHideFlags: 0

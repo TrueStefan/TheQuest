@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class LevelFinish : MonoBehaviour
+public class LevelFinish2 : MonoBehaviour
 {
     
     private TilemapCollider2D platforms;
@@ -16,7 +16,7 @@ public class LevelFinish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("ChaseMob (1)") == null && GameObject.Find("ChaseMob (2)") == null && GameObject.Find("ChaseMob") == null)
+        if (GameObject.Find("Mob3 (1)") == null && GameObject.Find("Mob3 (2)") == null && GameObject.Find("Mob3") == null)
         {
             platforms.enabled = false;
             platforms.GetComponent<TilemapRenderer>().enabled = false;

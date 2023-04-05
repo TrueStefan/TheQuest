@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChestOpen : MonoBehaviour
+public class ChestOpen2 : MonoBehaviour
 {
     private Animator chestAnim;
     public Chest chest; // reference to the Chest script component
@@ -18,7 +18,7 @@ public class ChestOpen : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.Find("ChaseMob (1)") == null && GameObject.Find("ChaseMob (2)") == null && GameObject.Find("ChaseMob") == null){
+        if (GameObject.Find("Mob3 (1)") == null && GameObject.Find("Mob3 (2)") == null && GameObject.Find("Mob3") == null){
             GameObject.Find ("Chest").transform.localScale = new Vector3(0.3f, 0.28f, 1f);
             chestAnim = GetComponent<Animator>();
             Debug.Log("Starting state:" + chestAnim.GetBool("ChestOpen"));
