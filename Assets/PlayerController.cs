@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer spriteRenderer;
+    public SwordAttack swordAttack;
 
     public ContactFilter2D contactFilter;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
@@ -64,6 +65,24 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+    }
+
+    public void SwordAttack()
+    {
+
+        if (spriteRenderer.flipX == true)
+        {
+            swordAttack.AttackRight();
+        }
+        else
+        {
+            swordAttack.AttackRight();
+        }
+    }
+
+    public void EndSwordAttack()
+    {
+        swordAttack.StopAttack();
     }
 
     private void OnMove(InputValue value)

@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChaseMob (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1460737367925776302, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
 --- !u!1001 &162903731
@@ -234,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 1460737367925776302, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
       propertyPath: m_Name
       value: ChaseMob
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460737367925776302, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
@@ -345,6 +353,10 @@ PrefabInstance:
       value: 0.9948654
       objectReference: {fileID: 0}
     - target: {fileID: 6302298288853290423, guid: 3dfea8bf4a18d41e587262c2f446a96e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302298288853290423, guid: 3dfea8bf4a18d41e587262c2f446a96e, type: 3}
       propertyPath: m_Offset.x
       value: -0.015929222
       objectReference: {fileID: 0}
@@ -411,6 +423,14 @@ PrefabInstance:
     - target: {fileID: 6302298288853290428, guid: 3dfea8bf4a18d41e587262c2f446a96e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118441588648408520, guid: 3dfea8bf4a18d41e587262c2f446a96e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203859457484378977, guid: 3dfea8bf4a18d41e587262c2f446a96e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dfea8bf4a18d41e587262c2f446a96e, type: 3}
@@ -19005,6 +19025,10 @@ PrefabInstance:
     - target: {fileID: 1460737367925776302, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
       propertyPath: m_Name
       value: ChaseMob (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460737367925776302, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c81e352ace418448b020f8a2f54063, type: 3}
