@@ -21,30 +21,33 @@ public class MobShootAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canShoot == false)
+        if (player != null)
         {
-            timeToShoot -= Time.deltaTime;
-            if (timeToShoot <= 0)
+            if (canShoot == false)
             {
-                canShoot = true;
+                timeToShoot -= Time.deltaTime;
+                if (timeToShoot <= 0)
+                {
+                    canShoot = true;
+                }
             }
-        }
 
-        float distance = Vector2.Distance(player.transform.position, transform.position);
-        if (distance <= aggroRange && canShoot)
-        {
+            float distance = Vector2.Distance(player.transform.position, transform.position);
+            if (distance <= aggroRange && canShoot)
+            {
+                if (animator != null)
+                {
+                    animator.SetBool("isShooting", true);
+                }
+                canShoot = false;
+                timeToShoot = 1.0f / fireRate;
+                GameObject newProj = Instantiate(projectile, transform.position, transform.rotation);
+                Destroy(newProj, 8f);
+            }
             if (animator != null)
             {
-                animator.SetBool("isShooting", true);
+                animator.SetBool("isShooting", false);
             }
-            canShoot = false;
-            timeToShoot = 1.0f / fireRate;
-            GameObject newProj = Instantiate(projectile, transform.position, transform.rotation);
-            Destroy(newProj, 8f);
-        }
-        if (animator != null)
-        {
-            animator.SetBool("isShooting", false);
         }
     }
 }
