@@ -25,7 +25,6 @@ Installation
     Install Unity 2021.3.19f1 version.
     Open the extracted folder and find "The Quest" game.
     Double-click on "The Quest" game to launch it.
-    Add all scenes to the build settings
     
     Note: This game can be run on either a Windows or a Mac.
     
