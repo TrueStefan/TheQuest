@@ -23,7 +23,7 @@ public class MobBase : MonoBehaviour
     }
 
     public float health = 5;
-    public int damage = 4;
+    public int damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,6 @@ public class MobBase : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        Health -= damage;
     }
 }

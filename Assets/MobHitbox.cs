@@ -5,8 +5,10 @@ using UnityEngine;
 public class MobHitbox : MonoBehaviour
 {
     public Collider2D mobCollider;
-
     public MobBase mob;
+
+    float timetoShoot = 0;
+    bool canShoot = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,14 @@ public class MobHitbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (canShoot == false)
+        {
+            timetoShoot -= Time.deltaTime;
+            if (timetoShoot <= 0)
+            {
+                canShoot = true;
+            }
+        }
     }
 
     public void TakeDamage(float damage)
@@ -25,15 +34,14 @@ public class MobHitbox : MonoBehaviour
         mob.Health -= damage;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("mob collided");
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && canShoot)
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            print(player);
-            //something like this
-            //health -= collision.gameObject.GetComponent<PlayerAttack>().damage;
+            player.TakeDamage(mob.damage);
+            canShoot = false;
+            timetoShoot = 5;
         }
     }
 }

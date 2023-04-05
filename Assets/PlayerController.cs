@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,26 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public bool canMove = true;
+    public float health = 10;
+
+    public float Health
+    {
+        set
+        {
+            health = value;
+            print("Player health:" + health);
+
+            if (health <= 0)
+            {
+                Defeated();
+            }
+        }
+
+        get
+        {
+            return health;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,38 +53,54 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void Defeated()
+    {
+        canMove = false;
+        animator.SetBool("isMoving", false);
+        animator.SetBool("isDead", true);
+    }
+
+    public void SwitchToMainMenu()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene("DeathScreen");
+    }
+
     private void FixedUpdate()
     {
-        if (moveInput != Vector2.zero)
+        if (canMove)
         {
-            // check potential collisions
-            bool success = TryMove(moveInput);
-
-            if (!success)
+            if (moveInput != Vector2.zero)
             {
-                success = TryMove(new Vector2(moveInput.x, 0));
+                // check potential collisions
+                bool success = TryMove(moveInput);
+
+                if (!success)
+                {
+                    success = TryMove(new Vector2(moveInput.x, 0));
+                }
+
+                if (!success)
+                {
+                    success = TryMove(new Vector2(0, moveInput.y));
+                }
+
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
             }
 
-            if (!success)
+            if (moveInput.x < 0)
             {
-                success = TryMove(new Vector2(0, moveInput.y));
+                spriteRenderer.flipX = true;
+
             }
-
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetBool("isMoving", false);
-        }
-
-        if (moveInput.x < 0)
-        {
-            spriteRenderer.flipX = true;
-
-        }
-        else if (moveInput.x > 0)
-        {
-            spriteRenderer.flipX = false;
+            else if (moveInput.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
     }
 
@@ -83,6 +120,11 @@ public class PlayerController : MonoBehaviour
     public void EndSwordAttack()
     {
         swordAttack.StopAttack();
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
     }
 
     private void OnMove(InputValue value)

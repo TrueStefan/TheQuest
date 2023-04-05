@@ -16,14 +16,17 @@ public class MobChaseAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector2.Distance(player.transform.position, transform.position);
-        if (distance <= aggroRange)
+        if (player != null)
         {
-            Vector3 direction = player.transform.position - transform.position;
-            Vector3 movement = direction.normalized * speed * Time.deltaTime;
-            if (movement.magnitude > direction.magnitude)
-                movement = direction;
-            GetComponent<CharacterController>().Move(movement);
+            float distance = Vector2.Distance(player.transform.position, transform.position);
+            if (distance <= aggroRange)
+            {
+                Vector3 direction = player.transform.position - transform.position;
+                Vector3 movement = direction.normalized * speed * Time.deltaTime;
+                if (movement.magnitude > direction.magnitude)
+                    movement = direction;
+                GetComponent<CharacterController>().Move(movement);
+            }
         }
     }
 }
