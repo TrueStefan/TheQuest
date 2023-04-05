@@ -32,6 +32,6 @@ public class timer : MonoBehaviour
         currentTime += 1;
         float seconds = Mathf.FloorToInt(currentTime);
 
-        TimerTxt.text = string.Format("{000}",seconds);
+        TimerTxt.text = string.Format("Score: "+"{000}",seconds);
     }
 }

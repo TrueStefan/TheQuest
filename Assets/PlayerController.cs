@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
         {
             health = value;
             print("Player health:" + health);
-
             if (health <= 0)
             {
                 Defeated();
@@ -42,6 +41,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        healthcheck.totalHealth = 10;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -125,6 +125,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Health -= damage;
+        healthcheck.totalHealth = Health;
     }
 
     private void OnMove(InputValue value)
