@@ -117,7 +117,7 @@ MonoBehaviour:
   projectile: {fileID: 1530743228164307137, guid: 8ce642c9dc999ee4db9abf8af52b84ad, type: 3}
   aggroRange: 15
   animator: {fileID: 0}
-  fireRate: 1
+  fireRate: 0.5
 --- !u!58 &-1771423313205000864
 CircleCollider2D:
   m_ObjectHideFlags: 0
