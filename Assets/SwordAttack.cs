@@ -38,7 +38,6 @@ public class SwordAttack : MonoBehaviour
         if(collision.gameObject.tag == "Mob")
         {
             MobHitbox mob = collision.GetComponent<MobHitbox>();
-            print(mob);
 
             if (mob != null)
             {
@@ -47,6 +46,17 @@ public class SwordAttack : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "Totem")
+        {
+            MobBase mob = collision.GetComponent<MobBase>();
+            print(mob);
+
+            if (mob != null)
+            {
+                mob.TakeDamage(damage);
+            }
+        }
+
+        if (collision.gameObject.tag == "Cat")
         {
             MobBase mob = collision.GetComponent<MobBase>();
             print(mob);
